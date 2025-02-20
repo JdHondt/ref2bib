@@ -1,0 +1,246 @@
+[1] Amaia Abanda, Usue Mori, and Jose A Lozano. 2019. A review on
+distance based time series classification. Data Mining and Knowledge
+Discovery 33, 2 (2019), 378–412.
+[2] Rakesh Agrawal, Christos Faloutsos, and Arun N. Swami. 1993. Effi-
+cient Similarity Search In Sequence Databases. In FODO. 69–84.
+[3] Rakesh Agrawal, King-Ip Lin, Harpreet S. Sawhney, and Kyuseok
+Shim. 1995. Fast similarity search in the presence of noise, scaling,
+and translation in time-series databases. In Proceeding of the 21th
+International Conference on Very Large Data Bases. Citeseer, 490–501.
+[4] Shadab Alam, Franco D Albareti, Carlos Allende Prieto, Friedrich
+Anders, Scott F Anderson, Timothy Anderton, Brett H Andrews, Eric
+Armengaud, Éric Aubourg, Stephen Bailey, et al. 2015. The eleventh
+and twelfth data releases of the Sloan Digital Sky Survey: final data
+from SDSS-III. The Astrophysical Journal Supplement Series 219, 1
+(2015), 12.
+[5] Jonathan Alon, Stan Sclaroff, George Kollios, and Vladimir Pavlovic.
+2003. Discovering clusters in motion time-series data. In CVPR. 375–
+381.
+[6] Francisco Martinez Alvarez, Alicia Troncoso, Jose C Riquelme, and
+Jesus S Aguilar Ruiz. 2010. Energy time series forecasting based on
+pattern sequence similarity. IEEE Transactions on Knowledge and Data
+Engineering 23, 8 (2010), 1230–1243.
+[7] Henrik André-Jönsson and Dushan Z Badal. 1997. Using signature
+files for querying time-series data. In European Symposium on Princi-
+ples of Data Mining and Knowledge Discovery. Springer, 211–220.
+[8] Johannes Aßfalg, Hans-Peter Kriegel, Peer Kröger, Peter Kunath,
+Alexey Pryakhin, and Matthias Renz. 2006. Similarity search on
+time series based on threshold queries. In International Conference on
+Extending Database Technology. Springer, 276–294.
+[9] Martin Bach-Andersen, Bo Rømer-Odgaard, and Ole Winther. 2017.
+Flexible non-linear predictive models for large-scale wind turbine
+diagnostics. Wind Energy 20, 5 (2017), 753–764.
+[10] Anthony Bagnall, Hoang Anh Dau, Jason Lines, Michael Flynn, James
+Large, Aaron Bostrom, Paul Southam, and Eamonn Keogh. 2018.
+The UEA multivariate time series classification archive, 2018. arXiv
+preprint arXiv:1811.00075 (2018).
+[11] Anthony Bagnall, Jason Lines, Aaron Bostrom, James Large, and
+Eamonn Keogh. 2017. The great time series classification bake off: a
+review and experimental evaluation of recent algorithmic advances.
+Data Mining and Knowledge Discovery 31, 3 (2017), 606–660.
+[12] Anthony J Bagnall and Gareth J Janacek. 2004. Clustering time series
+from ARMA models with clipped data. In KDD. 49–58.
+[13] Ziv Bar-Joseph. 2004. Analyzing time series gene expression data.
+Bioinformatics 20, 16 (2004), 2493–2503.
+[14] Ziv Bar-Joseph, Georg K Gerber, David K Gifford, Tommi S Jaakkola,
+and Itamar Simon. 2003. Continuous representations of time-series
+gene expression data. Journal of Computational Biology 10, 3-4 (2003),
+341–356.
+[15] Ziv Bar-Joseph, Anthony Gitter, and Itamar Simon. 2012. Studying
+and modelling dynamic biological processes using time-series gene
+expression data. Nature Reviews Genetics 13, 8 (2012), 552.
+[16] Gustavo EAPA Batista, Eamonn J Keogh, Oben Moses Tataw, and
+Vinicius MA De Souza. 2014. CID: an efficient complexity-invariant
+distance for time series. Data Mining and Knowledge Discovery 28, 3
+(2014), 634–669.
+[17] Nurjahan Begum and Eamonn Keogh. 2014. Rare time series motif dis-
+covery from unbounded streams. Proceedings of the VLDB Endowment
+8, 2 (2014), 149–160.
+[18] Donald J Berndt and James Clifford. 1994. Using Dynamic Time
+Warping to Find Patterns in Time Series.. In AAAI Workshop on KDD.
+359–370
+[19] Bharat B Biswal, Maarten Mennes, Xi-Nian Zuo, Suril Gohel, Clare
+Kelly, Steve M Smith, Christian F Beckmann, Jonathan S Adelstein,
+Randy L Buckner, Stan Colcombe, et al. 2010. Toward discovery
+science of human brain function. Proceedings of the National Academy
+of Sciences 107, 10 (2010), 4734–4739.
+[20] R Bracewell. 1965. Pentagram notation for cross correlation. The
+Fourier transform and its applications. New York: McGraw-Hill 46
+(1965), 243.
+[21] Markus M Breunig, Hans-Peter Kriegel, Raymond T Ng, and Jörg
+Sander. 2000. LOF: identifying density-based local outliers. In ACM
+sigmod record, Vol. 29. ACM, 93–104.
+[22] Peter J Brockwell and Richard A Davis. 2016. Introduction to time
+series and forecasting. springer.
+[23] Lisa Gottesfeld Brown. 1992. A survey of image registration tech-
+niques. ACM computing surveys (CSUR) 24, 4 (1992), 325–376.
+[24] Yuhan Cai and Raymond Ng. 2004. Indexing spatio-temporal trajec-
+tories with Chebyshev polynomials. In SIGMOD. 599–610.
+[25] Alessandro Camerra, Themis Palpanas, Jin Shieh, and Eamonn Keogh.
+2010. iSAX 2.0: Indexing and mining one billion time series. In 2010
+IEEE International Conference on Data Mining. IEEE, 58–67.
+[26] Sung-Hyuk Cha. 2007. Comprehensive survey on distance/similarity
+measures between probability density functions. City 1, 2 (2007), 1.
+[27] Lei Chen and Raymond Ng. 2004. On the marriage of Lp-norms and
+edit distance. In VLDB. 792–803.
+[28] Lei Chen, M Tamer Özsu, and Vincent Oria. 2005. Robust and fast
+similarity search for moving object trajectories. In SIGMOD. 491–502.
+[29] Qiuxia Chen, Lei Chen, Xiang Lian, Yunhao Liu, and Jeffrey Xu Yu.
+2007. Indexable PLA for efficient similarity search. In VLDB. 435–446.
+[30] Yueguo Chen, Mario A Nascimento, Beng Chin Ooi, and Anthony KH
+Tung. 2007. Spade: On shape-based pattern detection in streaming
+time series. In ICDE. 786–795.
+[31] Bill Chiu, Eamonn Keogh, and Stefano Lonardi. 2003. Probabilistic
+discovery of time series motifs. In Proceedings of the ninth ACM
+SIGKDD international conference on Knowledge discovery and data
+mining. ACM, 493–498.
+[32] Kelvin Kam Wing Chu and Man Hon Wong. 1999. Fast time-series
+searching with scaling and shifting. In Proceedings of the eighteenth
+ACM SIGMOD-SIGACT-SIGART symposium on Principles of database
+systems. Citeseer, 237–248.
+[33] Richard Cole, Dennis Shasha, and Xiaojian Zhao. 2005. Fast window
+correlations over uncooperative time series. In Proceedings of the
+eleventh ACM SIGKDD international conference on Knowledge discov-
+ery in data mining. ACM, 743–749.
+[34] James W Cooley and John W Tukey. 1965. An algorithm for the
+machine calculation of complex Fourier series. Math. Comp. 19, 90
+(1965), 297–301.
+[35] Corinna Cortes and Vladimir Vapnik. 1995. Support-vector networks.
+Machine learning 20, 3 (1995), 273–297.
+[36] Madalena Costa, Ary L Goldberger, and C-K Peng. 2002. Multiscale
+entropy analysis of complex physiologic time series. Physical review
+letters 89, 6 (2002), 068102.
+[37] Nello Cristianini and John Shawe-Taylor. 2000. An introduction to
+support vector machines and other kernel-based learning methods. Cam-
+bridge university press.
+[38] Marco Cuturi. 2011. Fast global alignment kernels. In Proceedings
+of the 28th international conference on machine learning (ICML-11).
+929–936.
+[39] Michele Dallachiesa, Besmira Nushi, Katsiaryna Mirylenka, and
+Themis Palpanas. 2012. Uncertain time-series similarity: Return to the
+basics. Proceedings of the VLDB Endowment 5, 11 (2012), 1662–1673.
+[40] Michele Dallachiesa, Themis Palpanas, and Ihab F Ilyas. 2014. Top-k
+nearest neighbor search in uncertain data series. Proceedings of the
+VLDB Endowment 8, 1 (2014), 13–24.
+[41] Hoang Anh Dau, Eamonn Keogh, Kaveh Kamgar, Chin-Chia Michael
+Yeh, Yan Zhu, Shaghayegh Gharghabi, Chotirat Ann Ratanamahatana,
+Yanping, Bing Hu, Nurjahan Begum, Anthony Bagnall, Abdullah
+Mueen, Gustavo Batista, and Hexagon-ML. 2018. The UCR Time
+Series Classification Archive. https://www.cs.ucr.edu/~eamonn/
+time_series_data_2018/.
+[42] Janez Demšar. 2006. Statistical comparisons of classifiers over mul-
+tiple data sets. The Journal of Machine Learning Research 7 (2006),
+1–30.
+[43] Michel-Marie Deza and Elena Deza. 2006. Dictionary of distances.
+Elsevier.
+[44] Michel Marie Deza and Elena Deza. 2009. Encyclopedia of distances.
+In Encyclopedia of distances. Springer, 1–583.
+[45] Hui Ding, Goce Trajcevski, Peter Scheuermann, Xiaoyue Wang, and
+Eamonn Keogh. 2008. Querying and mining of time series data:
+experimental comparison of representations and distance measures.
+Proceedings of the VLDB Endowment 1, 2 (2008), 1542–1552.
+[46] Rui Ding, Qiang Wang, Yingnong Dang, Qiang Fu, Haidong Zhang,
+and Dongmei Zhang. 2015. Yading: Fast clustering of large-scale time
+series data. Proceedings of the VLDB Endowment 8, 5 (2015), 473–484.
+[47] Alejandro Domínguez. 2015. A history of the convolution operation
+[Retrospectroscope]. IEEE pulse 6, 1 (2015), 38–49.
+[48] Karima Echihabi, Kostas Zoumpatianos, Themis Palpanas, and Houda
+Benbrahim. 2018. The lernaean hydra of data series similarity search:
+An experimental evaluation of the state of the art. Proceedings of the
+VLDB Endowment 12, 2 (2018), 112–127.
+[49] Jason Ernst and Ziv Bar-Joseph. 2006. STEM: a tool for the analysis
+of short time series gene expression data. BMC bioinformatics 7, 1
+(2006), 191.
+[50] Philippe Esling and Carlos Agon. 2012. Time-series data mining.
+ACM Computing Surveys (CSUR) 45, 1 (2012), 12.
+[51] Christos Faloutsos, M. Ranganathan, and Yannis Manolopoulos. 1994.
+Fast Subsequence Matching in Time-series Databases. In SIGMOD.
+419–429.
+[52] Manuel Fernández-Delgado, Eva Cernadas, Senén Barro, and Dinani
+Amorim. 2014. Do we need hundreds of classifiers to solve real world
+classification problems? The journal of machine learning research 15,
+1 (2014), 3133–3181.
+[53] Elias Frentzos, Kostas Gratsias, and Yannis Theodoridis. 2007. Index-
+based most similar trajectory search. In ICDE. 816–825.
+[54] Milton Friedman. 1937. The use of ranks to avoid the assumption of
+normality implicit in the analysis of variance. J. Amer. Statist. Assoc.
+32 (1937), 675–701.
+[55] Daniel G Gavin, W Wyatt Oswald, Eugene R Wahl, and John W
+Williams. 2003. A statistical approach to evaluating distance metrics
+and analog assignments for pollen records. Quaternary Research 60,
+3 (2003), 356–367.
+[56] Martin Gavrilov, Dragomir Anguelov, Piotr Indyk, and Rajeev Mot-
+wani. 2000. Mining the stock market: Which measure is best. In Proc.
+of the 6th ACM SIGKDD. 487–496.
+[57] Rafael Giusti and Gustavo EAPA Batista. 2013. An Empirical Com-
+parison of Dissimilarity Measures for Time Series Classification. In
+BRACIS. 82–88.
+[58] Steve Goddard, Sherri K Harms, Stephen E Reichenbach, Tsegaye
+Tadesse, and William J Waltman. 2003. Geospatial decision support
+for drought risk management. Commun. ACM 46, 1 (2003), 35–37.
+[59] Dina Q Goldin and Paris C Kanellakis. 1995. On similarity queries
+for time-series data: constraint specification and implementation.
+In International Conference on Principles and Practice of Constraint
+Programming. Springer, 137–153.
+[60] Tomasz Górecki and Maciej Łuczak. 2013. Using derivatives in time
+series classification. Data Mining and Knowledge Discovery 26, 2(2013), 310–331.
+[61] Aditya Grover, Ashish Kapoor, and Eric Horvitz. 2015. A deep hybrid
+model for weather forecasting. In Proceedings of the 21th ACM SIGKDD
+International Conference on Knowledge Discovery and Data Mining.
+ACM, 379–386.
+[62] Joel Grus. 2019. Data science from scratch: first principles with python.
+O’Reilly Media.
+[63] Jon Hills, Jason Lines, Edgaras Baranauskas, James Mapp, and An-
+thony Bagnall. 2014. Classification of time series by shapelet transfor-
+mation. Data Mining and Knowledge Discovery 28, 4 (2014), 851–881.
+[64] Ove Hoegh-Guldberg, Peter J Mumby, Anthony J Hooten, Robert S
+Steneck, Paul Greenfield, Edgardo Gomez, C Drew Harvell, Peter F
+Sale, Alasdair J Edwards, Ken Caldeira, et al. 2007. Coral reefs under
+rapid climate change and ocean acidification. science 318, 5857 (2007),
+1737–1742.
+[65] Rie Honda, Shuai Wang, Tokio Kikuchi, and Osamu Konishi. 2002.
+Mining of moving objects from time-series images and its application
+to satellite weather imagery. Journal of Intelligent Information Systems
+19, 1 (2002), 79–93.
+[66] Bing Hu, Yanping Chen, and Eamonn Keogh. 2013. Time Series
+Classification under More Realistic Assumptions. In SDM. 578–586.
+[67] Pablo Huijse, Pablo A Estevez, Pavlos Protopapas, Jose C Principe,
+and Pablo Zegers. 2014. Computational intelligence challenges and
+applications on large-scale astronomical time series databases. IEEE
+Computational Intelligence Magazine 9, 3 (2014), 27–39.
+[68] Young-Seon Jeong, Myong K Jeong, and Olufemi A Omitaomu. 2011.
+Weighted dynamic time warping for time series classification. Pattern
+Recognition 44, 9 (2011), 2231–2240.
+[69] Konstantinos Kalpakis, Dhiral Gada, and Vasundhara Puttagunta.
+2001. Distance measures for effective clustering of ARIMA time-
+series. In ICDM. 273–280.
+[70] Kunio Kashino, Gavin Smith, and Hiroshi Murase. 1999. Time-series
+active search for quick retrieval of audio and video. In 1999 IEEE
+International Conference on Acoustics, Speech, and Signal Processing.
+Proceedings. ICASSP99 (Cat. No. 99CH36258), Vol. 6. IEEE, 2993–2996.
+[71] Shrikant Kashyap and Panagiotis Karras. 2011. Scalable knn search on
+vertically stored time series. In Proceedings of the 17th ACM SIGKDD
+international conference on Knowledge discovery and data mining.
+ACM, 1334–1342.
+[72] Eamonn Keogh. 2006. A decade of progress in indexing and mining
+large time series databases. In VLDB. 1268–1268.
+[73] Eamonn Keogh, Kaushik Chakrabarti, Michael Pazzani, and Sharad
+Mehrotra. 2001. Locally Adaptive Dimensionality Reduction for
+Indexing Large Time Series Databases. In SIGMOD. 151–162.
+[74] Eamonn Keogh and Jessica Lin. 2005. Clustering of time-series subse-
+quences is meaningless: Implications for previous and future research.
+Knowledge and Information Systems 8, 2 (2005), 154–177.
+[75] Eamonn Keogh and Chotirat Ann Ratanamahatana. 2005. Exact in-
+dexing of dynamic time warping. Knowledge and Information Systems
+7, 3 (2005), 358–386.
+[76] Chan Kin-pong and Fu Ada. 1999. Efficient Time Series Matching by
+Wavelets. In ICDE. 126–133.
+[77] S Knieling, J Niediek, E Kutter, J Bostroem, CE Elger, and F Mormann.
+2017. An online adaptive screening procedure for selective neuronal
+responses. Journal of neuroscience methods 291 (2017), 36–42.
+[78] Flip Korn, H. V. Jagadish, and Christos Faloutsos. 1997. Efficiently
+Supporting Ad Hoc Queries in Large Datasets of Time Sequences. In
+SIGMOD. 289–300.
+[79] Yann LeCun, Yoshua Bengio, et al. 1995. Convolutional networks for
+images, speech, and time series. The handbook of brain theory and
+neural networks 3361, 10 (1995), 1995.
