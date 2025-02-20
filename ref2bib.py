@@ -38,7 +38,7 @@ class Reference2BibTeX:
                 timeout=10
             )
             # Add rate limiting
-            time.sleep(1)  # Wait 1 second between requests
+            time.sleep(.5)  # Wait .5 seconds between requests
             
             if response.status_code == 200:
                 data = response.json()
@@ -114,28 +114,31 @@ class Reference2BibTeX:
 
         return '\n'.join(bibtex)
 
-    def convert_references(self, references: List[str]) -> List[str]:
-        """Convert a list of references to BibTeX entries"""
-        bibtex_entries = []
+    def convert_references(self, references: List[str], output_file: str) -> int:
+        """Convert references to BibTeX entries and write them to file"""
+        successful_conversions = 0
         total = len(references)
         
         print(f"Converting {total} references...")
         for i, ref in enumerate(references, 1):
-            print(f"Processing reference {i}/{total}", end='\r')
+            print(f"Processing reference {i}/{total}: {ref[:100]}")
             try:
                 crossref_data = self.search_reference(ref)
                 bibtex = self.to_bibtex(crossref_data)
                 if bibtex:
                     print("✓ Match found")
-                    bibtex_entries.append(bibtex)
+                    # Open and close file for each entry
+                    with open(output_file, 'a', encoding='utf-8') as f:
+                        f.write(bibtex + "\n\n")
+                    successful_conversions += 1
                 else:
                     print("✗ No match found")
             except Exception as e:
                 print(f"✗ Error: {str(e)}")
                 continue
         
-        print(f"\nSummary: Successfully converted {len(bibtex_entries)} out of {total} references")
-        return bibtex_entries
+        print(f"\nSummary: Successfully converted {successful_conversions} out of {total} references")
+        return successful_conversions
 
 def parse_numbered_references(content: str) -> List[str]:
     """Parse numbered references from text content."""
@@ -170,11 +173,15 @@ def parse_numbered_references(content: str) -> List[str]:
 def main():
     parser = argparse.ArgumentParser(description='Convert academic references to BibTeX entries')
     parser.add_argument('input_file', help='File containing numbered references')
-    parser.add_argument('--output', '-o', help='Output file for BibTeX entries', default='references.bib')
+    parser.add_argument('--output', '-o', help='Output file for BibTeX entries', default=None)
     parser.add_argument('--api-key', help='Crossref API key (optional)', default=None)
     parser.add_argument('--email', help='Email for API identification', default='your.email@example.com')
     
     args = parser.parse_args()
+
+    # If no output file is specified, use the input file name with .bib extension
+    if not args.output:
+        args.output = args.input_file.replace('.txt', '.bib')
 
     try:
         # Read the entire file content
@@ -186,11 +193,9 @@ def main():
         print(f"Found {len(references)} references in the input file")
 
         converter = Reference2BibTeX(args.api_key, args.email)
-        bibtex_entries = converter.convert_references(references)
+        successful = converter.convert_references(references, args.output)
 
-        if bibtex_entries:
-            with open(args.output, 'w', encoding='utf-8') as f:
-                f.write('\n\n'.join(bibtex_entries))
+        if successful > 0:
             print(f"BibTeX entries written to {args.output}")
         else:
             print("No BibTeX entries were generated")
@@ -205,6 +210,6 @@ def main():
 if __name__ == '__main__':
     # Manual run
     if len(sys.argv) == 1:
-        sys.argv.extend(["paparrizos20.txt", "--output", "paparrizos20.bib"])
+        sys.argv.extend(["paparrizos20_small.txt"])
 
     main()
