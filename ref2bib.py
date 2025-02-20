@@ -2,17 +2,15 @@ import time
 import requests
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.util.retry import Retry
-import bibtexparser
 import argparse
 import sys
-import json
 from typing import List, Optional
 
 class Reference2BibTeX:
-    def __init__(self, api_key: Optional[str] = None):
+    def __init__(self, api_key: Optional[str] = None, email: str = 'your.email@example.com'):
         self.crossref_api = "https://api.crossref.org/works"
         self.headers = {
-            'User-Agent': 'Reference2BibTeX/1.0 (https://github.com/yourusername/ref2bib; mailto:j.e.d.hondt@tue.nl)'
+            'User-Agent': f'Reference2BibTeX/1.0 (https://github.com/JdHondt/ref2bib; mailto:{email})'
         }
         if api_key:
             self.headers['Authorization'] = f'Bearer {api_key}'
@@ -52,25 +50,69 @@ class Reference2BibTeX:
             print(f"Request failed: {str(e)}")
         return {}
 
+    def _escape_tex(self, text: str) -> str:
+        """Escape special characters for BibTeX"""
+        replacements = {
+            '&': r'\&',
+            '%': r'\%',
+            '$': r'\$',
+            '#': r'\#',
+            '_': r'\_',
+            '{': r'\{',
+            '}': r'\}',
+            '~': r'\textasciitilde{}',
+            '^': r'\textasciicircum{}',
+            '\\': r'\textbackslash{}',
+        }
+        for char, replacement in replacements.items():
+            text = text.replace(char, replacement)
+        return text
+
     def to_bibtex(self, crossref_data: dict) -> str:
         """Convert Crossref data to BibTeX entry"""
         if not crossref_data:
             return ""
 
-        entry = {
-            'ID': crossref_data.get('DOI', '').replace('/', '_'),
-            'ENTRYTYPE': crossref_data.get('type', 'article'),
-            'title': crossref_data.get('title', [''])[0],
-            'author': ' and '.join([f"{author.get('family', '')}, {author.get('given', '')}" 
-                                  for author in crossref_data.get('author', [])]),
+        # Get the entry type
+        entry_type = crossref_data.get('type', 'article')
+
+        # Create ID from first author's last name and year
+        year = str(crossref_data.get('published-print', {}).get('date-parts', [['']])[0][0])
+        year_suffix = year[-2:] if year else ''
+        
+        first_author = crossref_data.get('author', [{}])[0]
+        author_lastname = first_author.get('family', '').lower() if first_author else ''
+        entry_id = f"{author_lastname}{year_suffix}" if author_lastname and year_suffix else crossref_data.get('DOI', '').replace('/', '_')
+
+        # Prepare the fields
+        fields = {
+            'title': '{' + self._escape_tex(crossref_data.get('title', [''])[0]) + '}',
+            'author': '{' + self._escape_tex(' and '.join([
+                f"{author.get('family', '')}, {author.get('given', '')}"
+                for author in crossref_data.get('author', [])
+            ])) + '}',
             'year': str(crossref_data.get('published-print', {}).get('date-parts', [['']])[0][0]),
             'doi': crossref_data.get('DOI', ''),
         }
 
-        if 'container-title' in crossref_data:
-            entry['journal'] = crossref_data['container-title'][0]
+        # Add optional fields
+        if 'container-title' in crossref_data and crossref_data['container-title']:
+            fields['journal'] = '{' + self._escape_tex(crossref_data['container-title'][0]) + '}'
+        if 'volume' in crossref_data:
+            fields['volume'] = str(crossref_data['volume'])
+        if 'issue' in crossref_data:
+            fields['number'] = str(crossref_data['issue'])
+        if 'page' in crossref_data:
+            fields['pages'] = str(crossref_data['page'])
 
-        return bibtexparser.dumps(bibtexparser.bibdatabase.BibDatabase(entries=[entry]))
+        # Build the BibTeX entry
+        bibtex = [f"@{entry_type}{{{entry_id},"]
+        for key, value in fields.items():
+            if value:  # Only include non-empty fields
+                bibtex.append(f"  {key} = {value},")
+        bibtex.append("}")
+
+        return '\n'.join(bibtex)
 
     def convert_references(self, references: List[str]) -> List[str]:
         """Convert a list of references to BibTeX entries"""
@@ -130,6 +172,7 @@ def main():
     parser.add_argument('input_file', help='File containing numbered references')
     parser.add_argument('--output', '-o', help='Output file for BibTeX entries', default='references.bib')
     parser.add_argument('--api-key', help='Crossref API key (optional)', default=None)
+    parser.add_argument('--email', help='Email for API identification', default='your.email@example.com')
     
     args = parser.parse_args()
 
@@ -142,7 +185,7 @@ def main():
         references = parse_numbered_references(content)
         print(f"Found {len(references)} references in the input file")
 
-        converter = Reference2BibTeX(args.api_key)
+        converter = Reference2BibTeX(args.api_key, args.email)
         bibtex_entries = converter.convert_references(references)
 
         if bibtex_entries:
@@ -162,6 +205,6 @@ def main():
 if __name__ == '__main__':
     # Manual run
     if len(sys.argv) == 1:
-        sys.argv.extend(["ref2bib/paparrizos20.txt", "--output", "ref2bib/paparrizos20.bib"])
+        sys.argv.extend(["paparrizos20.txt", "--output", "paparrizos20.bib"])
 
     main()
